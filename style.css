@@ -1,0 +1,860 @@
+@import url("https://fonts.googlea pis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16vh;
+    /* scrolling up */
+
+}
+
+:root {
+    --main-color: #ffbd59;
+    --nav-color: #0e0a0aee;
+    --bg-color: #e8f3f1;
+    --black: #2f4858;
+    --card-color: #c0dbea;
+    --border: 0.1rem solid var(--card-color)
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* button side */
+.btn {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0.8rem 2.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem;
+    background-color: #ffbd59;
+}
+
+.header {
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16vh;
+    /* z-index: 1000; */
+}
+
+
+
+.header .logo img {
+    height: 10rem;
+    border-radius: 50%;
+
+
+}
+
+.header .navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: all 0.5s ease-in;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-top: 0.3rem solid var(--black);
+    border-bottom: 0.3rem solid var(--black);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.header .icon {
+    display: flex;
+}
+
+.header .icon div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    /* margin-left: 1rem; */
+    margin-left: 2rem;
+}
+
+.header .icon div:hover {
+    color: var(--main-color);
+
+}
+
+.header .menu-icon {
+    display: none;
+}
+
+/* search box */
+.header .search-form {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 115%;
+    right: -100%;
+    width: 45rem;
+    border: solid 1px black;
+    height: 4.5rem;
+    background-color: #fff;
+    text-transform: none;
+}
+
+.header .search-form.active {
+    right: 7%;
+}
+
+.header .search-form input {
+    width: 100%;
+
+    text-transform: none;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.header .search-form label {
+    font-size: 2rem;
+    color: var(--black);
+    padding-right: 1.3rem;
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+/* cart section */
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 35rem;
+    background-color: #fff;
+    height: 80vh;
+    border: solid 1px black;
+    padding: 0.8rem;
+}
+
+.header .cart-items-container.active {
+    right: 0;
+}
+
+.header .cart-items-container .cart-items {
+    display: flex;
+    align-items: center;
+    margin: 2.5rem 0;
+    /* border: solid 1px black; */
+    position: relative;
+    gap: 1rem;
+}
+
+.header .cart-items-container .cart-items img {
+    width: 5rem;
+}
+
+.header .cart-items-container .cart-items span {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .cart-items-container .cart-items span:hover {
+    color: red;
+}
+
+.header .cart-items-container .cart-items .content h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    padding-bottom: 0.8rem;
+}
+
+.header .cart-items-container a {
+    width: 100%;
+}
+
+/* home section */
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 84vh;
+    margin-top: 16vh;
+    background-image: url(images/bg6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.home .hero {
+    width: 60rem;
+}
+
+.home .hero h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .hero p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 3.2rem;
+    padding: 1rem 0;
+}
+
+/* cake section */
+
+.title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 4.5rem;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0 var(--nav-color);
+}
+
+.title span {
+    color: var(--nav-color);
+}
+
+#cakes {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#cakes .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--nav-color);
+    margin-bottom: 30px;
+}
+
+#cakes .title span {
+    color: var(--main-color);
+    /* Highlighted color for the word 'Cakes' */
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Creates a responsive grid */
+    gap: 20px;
+    /* Space between grid items */
+    justify-items: center;
+    /* Centers the items within the grid cells */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cake Cart Items */
+.cake-cart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-cart:hover {
+    transform: translateY(-10px);
+    /* Slight lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.cake-cart img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cake-cart h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.cake-cart .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cake-cart .btn:hover {
+    background-color: #e55;
+}
+
+/* pastry section */
+/* Section title styling */
+.pastries .title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 50px;
+}
+
+.pastries .title span {
+    color: #ff6347;
+
+}
+
+/* Grid wrapper for pastries */
+.pastries .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 2rem;
+    /* Space between items */
+    padding: 0 20px;
+    /* Add some padding around the grid */
+}
+
+/* Individual pastry card styling */
+.pastries-card {
+    background: #fff;
+    /* White background for the cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Ensures content doesn't spill over */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+.pastries-card:hover {
+    transform: translateY(-10px);
+    /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffbd59;
+}
+
+/* Card icons */
+.pastries-card .icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding: 10px 10px;
+
+}
+
+.pastries-card .icons a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.pastries-card .icons a:hover {
+    color: #ff6347;
+    /* Hover effect for icons */
+}
+
+/* Image styling */
+.pastries-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* Content text styling */
+.pastries-card .content {
+    padding: 1rem;
+}
+
+.pastries-card .content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Star rating styling */
+.pastries-card .stars {
+    margin-top: 10px;
+}
+
+.pastries-card .stars i {
+    color: #ffb400;
+    /* Star color */
+    font-size: 1rem;
+}
+
+.pastries-card .stars i.fas.fa-star-half-alt {
+    color: #f0ad4e;
+    /* Color for half stars */
+}
+
+
+/* new arrival section */
+/* Title styling */
+.new-arrivals .title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 60px;
+}
+
+.new-arrivals .title span {
+    color: #ffbd59;
+}
+
+/* Wrapper for new arrivals grid */
+.new-arrivals .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Responsive grid */
+    gap: 2rem;
+    /* Space between items */
+    padding: 0 20px;
+    /* Padding around the grid */
+}
+
+/* Individual card styling */
+.new-arrivals .card {
+    background: #fff;
+    /* Card background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for card */
+.new-arrivals .card:hover {
+    transform: translateY(-10px);
+    /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-arrivals .wrapper .card .content .btn {
+    transform: scale(0);
+}
+
+.new-arrivals .wrapper .card:hover .content .btn {
+    transform: scale(1);
+}
+
+/* Image styling */
+.new-arrivals .card .img {
+    overflow: hidden;
+}
+
+.new-arrivals .card .img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Scale image on hover */
+.new-arrivals .card:hover .img img {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+}
+
+/* Content section inside the card */
+.new-arrivals .card .content {
+    padding: 1rem;
+}
+
+.new-arrivals .card .content a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Text description styling */
+.new-arrivals .card .content p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.new-arrivals .card .content .btn {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.new-arrivals .card .content .btn:hover {
+    background-color: #e53d28;
+    /* Darker shade of the button color */
+}
+
+
+
+/* about us section */
+.about .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 50px;
+
+}
+
+.about .title span {
+    color: var(--nav-color);
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-color);
+    flex-wrap: wrap;
+}
+
+.about .container .img {
+    flex: 1 1 30rem;
+}
+
+.about .container .img img {
+    width: 90%;
+}
+
+.about .container .content {
+    flex: 1 1 45rem;
+}
+
+.about .container .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    padding: 10rem 0;
+}
+
+.about .container .content p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    color: #fff;
+    line-height: 2.2rem;
+    font-style: italic;
+}
+
+/* review section */
+/* Basic styling for the review section */
+.review {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.title span {
+    color: #ff6f61;
+}
+
+/* Wrapper that holds all the review cards */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual review card */
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+} */
+.review .wrapper .review-card:hover .customer {
+    transform: scale(1.2);
+}
+
+/* Styling for the quote icon */
+.review-card img:first-child {
+    width: 40px;
+    margin-bottom: 15px;
+}
+
+/* Review text */
+.review-card p {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Customer image */
+.review-card .customer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Customer name */
+.review-card h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Stars rating */
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.stars i {
+    color: #ff6f61;
+    margin-right: 3px;
+    font-size: 1.2rem;
+}
+
+/* Adjust star size for half-star */
+.fas.fa-star-half-alt {
+    color: #ff6f61;
+}
+
+
+/* contact us section */
+.contact .content {
+    display: flex;
+    background-color: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* height: 50rem; */
+}
+
+.contact .content iframe {
+    height: 50rem;
+    flex: 1 1 45%;
+    object-fit: cover;
+}
+
+.contact .content form {
+    height: 50rem;
+    flex: 1 1 45rem;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.contact .content form h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3.5rem;
+    padding: 1.5rem 0;
+}
+
+.contact .content form .input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: var(--border);
+}
+
+.contact .content form .input-box span {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+.contact .content form .input-box input {
+    background-color: var(--black);
+    text-transform: none;
+    color: #fff;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+/* footer begins */
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+.footer .social-media {
+    padding: 1rem 0;
+}
+
+.footer .social-media a {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: 0.5rem;
+}
+
+.footer .social-media a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: 0.7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .credits {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credits span {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive styling for tablet and small lap */
+@media (max-width: 992px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header .logo img {
+        height: 9rem;
+    }
+
+    
+}
+
+/* responsiveness for mobile */
+@media (max-width: 768px) {
+
+    .header .menu-icon {
+        display: inline-block;
+    }
+
+    .pastries .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 30rem;
+        background-color: #fff;
+        height: 80vh;
+    }
+
+    .header .navbar.active {
+        right: 0;
+    }
+
+    .header .navbar a {
+        color: var(--nav-color);
+        display: block;
+        margin: 1.5rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+
+    }
+
+    .header .search-form {
+        width: 92%;
+    }
+
+    .header .search-form.active {
+        right: 4%;
+    }
+
+    .home .hero p {
+        font-size: 1.5rem;
+    }
+
+    .about .container .img img {
+        width: 100%;
+    }
+
+
+}
